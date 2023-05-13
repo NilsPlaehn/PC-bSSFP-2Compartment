@@ -1,13 +1,13 @@
 function profile = bSSFP_AlignedSign(M0,T1,T2,alpha,phiPC,TR,TE,deltaCS,dB0,B0)
-%% Description: generation of PC-bSSFP profiles for aligned signs
+% Description: generation of PC-bSSFP profiles for aligned signs
 
-%% Author of function: 
+% Author of function: 
 % Nils MJ Plähn, Bern, Switzerland
 % E-mail: nils.plaehn@students.unibe.ch
 % Department of Diagnostic, Interventional and Pediatric Radiology (DIPR), Inselspital, Bern University Hospital, University of Bern, Switzerland
 % Translation Imaging Center (TIC), Swiss Institute for Translational and Entrepreneurial Medicine, Bern, Switzerland
 
-%% 1)See papers e.g.:
+% 1)See papers e.g.:
 % i)
 % Shcherbakova Y, Berg CAT van den, Moonen CTW, Bartels LW. PLANET: 
 % An ellipse fitting approach for simultaneous T1 and T2 mapping using
@@ -17,7 +17,7 @@ function profile = bSSFP_AlignedSign(M0,T1,T2,alpha,phiPC,TR,TE,deltaCS,dB0,B0)
 % for multiparametric MRI using phase-cycled bSSFP imaging. 
 % Magn. Reson. Med. 2019;81:1534–1552 doi: 10.1002/mrm.27491
 
-%% 2) Used parameters: 
+% 2) Used parameters: 
 % M0:      polarized magnetization of the substance, i.e. PD ( 1^H proton density)
 % T1:      longitudinal relaxation time
 % T2:      transversal  relaxation time
@@ -31,7 +31,7 @@ function profile = bSSFP_AlignedSign(M0,T1,T2,alpha,phiPC,TR,TE,deltaCS,dB0,B0)
 % dB0:     B0 inhomogeneity
 % deltaCS: chemical shift
 
-%% 3) following parameterization orients base onto the defintions of paper (i,ii)
+% 3) following parameterization orients base onto the defintions of paper (i,ii)
 
         gamma       = 2*pi*42.577*10^6; 
         E1          = exp(-TR./T1);
