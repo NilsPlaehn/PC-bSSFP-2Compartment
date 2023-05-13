@@ -50,7 +50,8 @@ function profile = bSSFP_AlignedSign(M0,T1,T2,alpha,phiPC,TR,TE,deltaCS,dB0,B0)
         % it does not affect the shape as discussed in theory section of the Note but
         % the rotation sense of the profile in complex plane is clockwise
         % instead to [Zur,Ganter]. This is not a problem and only mentioned
-        % for completeness
+        % for completeness. For plausibility the sign of phiPC can be inverted which will
+        % lead to equal trajectories.
         denominator = 1-E1.*cos(alpha)-E2.^2.*(E1-cos(alpha));  % auxiliary defintion
         M           = M0.*(1-E1).*sin(alpha)./denominator; 
         K           = 1;                                        % "K is the magnitude of the combined receive field" (i)
