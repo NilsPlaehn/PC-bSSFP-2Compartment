@@ -61,8 +61,8 @@ function profile = bSSFP_AlignedSign(M0,T1,T2,alpha,phiPC,TR,TE,deltaCS,dB0,B0)
         b           = E2.*(1-E1).*(1+cos(alpha))./denominator;
         a           = E2; 
  
-        % Note: the first exponent theta has the same sign to the second exponent phi=theta*TE/TR 
-        % i.e. ~(1-E2*exp(1i*(theta-phi)))*exp(1i*theta*TE/TR) is
+        % Note: the first exponent theta has the same sign to the second exponent phi=theta0*TE/TR 
+        % i.e. ~(1-E2*exp(1i*(theta0-phi)))*exp(1i*theta0*TE/TR) is
         % PLUS/PLUS in contrast to the opposite sign function
         profile = Meff.*(1-a.*exp(1i.*theta))./(1-b.*cos(theta)).*exp(1i.*phi); 
 end
