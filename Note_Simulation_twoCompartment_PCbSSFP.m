@@ -1,14 +1,14 @@
 
-%% Description: generation of two-compartment PC-bSSFP profiles for aligned signs and opposite signs
+% Description: generation of two-compartment PC-bSSFP profiles for aligned signs and opposite signs
 
-%% Author of code: 
+% Author of code: 
 % Nils MJ Plähn, Bern, Switzerland
 % E-mail: nils.plaehn@students.unibe.ch
 % Department of Diagnostic, Interventional and Pediatric Radiology (DIPR), Inselspital, Bern University Hospital, University of Bern, Switzerland
 % Translation Imaging Center (TIC), Swiss Institute for Translational and Entrepreneurial Medicine, Bern, Switzerland
 
-%% 1)   See papers e.g.:
-%% 1.1) opposite signs
+% 1)   See papers e.g.:
+% 1.1) opposite signs
 % i)
 % Ganter C. Steady state of gradient echo sequences with radiofrequency phase cycling: 
 % Analytical solution, contrast enhancement with partial spoiling. 
@@ -16,7 +16,7 @@
 % ii) 
 % Zur Y, Wood ML, Neuringer LJ. Motion-insensitive, steady-state free precession imaging.
 % Magn. Reson. Med. 1990;16:444–459 doi: 10.1002/mrm.1910160311
-%% 1.2) aligned signs:
+% 1.2) aligned signs:
 % i)
 % Shcherbakova Y, Berg CAT van den, Moonen CTW, Bartels LW. PLANET: 
 % An ellipse fitting approach for simultaneous T1 and T2 mapping using
@@ -26,7 +26,7 @@
 % for multiparametric MRI using phase-cycled bSSFP imaging. 
 % Magn. Reson. Med. 2019;81:1534–1552 doi: 10.1002/mrm.27491
 
-%% 2) Used parameters: 
+% 2) Used parameters: 
 % M0:      polarized magnetization of the substance, i.e. PD ( 1^H proton density)
 % T1:      longitudinal relaxation time
 % T2:      transversal  relaxation time
@@ -57,13 +57,13 @@ dB0     = 1000*randn(1);      % Arbitrary: does not lead to a difference of the 
 B0      = 2.89;               % Experimental value
 fPD     = 0.6;                % Experimental value
 
-%% 3) Sampling of different repetition times TR
+% 3) Sampling of different repetition times TR
 TR_exp = [3.4,3.62,4.11,4.62,4.84,5.14]/1000;  % Experimental value
 nTR    = numel(TR_exp); 
-%% 4) Choose whether opposite or aligned phase will be simulated
+% 4) Choose whether opposite or aligned phase will be simulated
 Is_Opposite = false; %true; 
 
-%% 5) Generate superimposed signals
+% 5) Generate superimposed signals
 bSSFP_2comp = zeros(nTR,nPC);
 for indTR = 1:nTR
     TR            = TR_exp(indTR);
@@ -87,7 +87,7 @@ for indTR = 1:nTR
     bSSFP_2comp(indTR,:) = tot; 
 end
 
-%% 6) Visualization of all two-compartment profiles for the given TR variation and the sign choice
+% 6) Visualization of all two-compartment profiles for the given TR variation and the sign choice
 h = figure(1); 
 subplot(2,3,1)
 k = 1; 
@@ -120,7 +120,7 @@ title(['TR = ' num2str(TR_exp(k)*1000) ' ms'])
 
 h.Position = [200 200 900 500];
     
-%% 7) Visualization of individual TR PC-bSSFP profile
+% 7) Visualization of individual TR PC-bSSFP profile
 
 indTR   = 6;                    % indTR selects profile of repetition time choice TR_exp(indTR)
 profile = bSSFP_2comp(indTR,:); 
