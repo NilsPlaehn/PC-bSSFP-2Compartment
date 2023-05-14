@@ -55,7 +55,8 @@ phi     = phit(1:nPC);        % linear sampling of PC increments =[0,2*pi[
                               % shape
 deltaCS = 2.25*10^(-6);       % Experimental value for PC-bSSFP 2.25+-0.03ppm and NMR is 2.32+-0.07ppm
                               % DANGER NOTE: deltaCS=-deltaCS lead to a complex conjugation which appears as a
-                              % f=0.4 acetone fraction instead 0.6 fraction. Hence the sign of the CS is important and shouln't be changed!
+                              % f=0.4 acetone fraction instead 0.6 fraction (in right handed coordinate frame).
+                              % Hence the sign of the CS is important and shouln't be changed!
                               % The sign convention in combination of the "bSSFP_OppositeSign.m" function
                               % follows the physical ground truth that Acetone has a higher B0 field screening effect (lenz rule)
                               % than the protons of water. In water the high electronegativity of the oxygen atom
