@@ -50,7 +50,7 @@ T2      = T1/Lambda;
 nPC     = 38;                 % Number of sampled PC increments
 phit    = linspace(0,2*pi,nPC+1);
 phi     = phit(1:nPC);        % linear sampling of PC increments =[0,2*pi[
-deltaCS = 2.25*10^(-6);      % Experimental value for PC-bSSFP 2.25+-0.03ppm and NMR is 2.32+-0.07ppm
+deltaCS = 2.25*10^(-6);       % Experimental value for PC-bSSFP 2.25+-0.03ppm and NMR is 2.32+-0.07ppm
 dB0     = 1000*randn(1);      % Arbitrary: does not lead to a difference of the shape up
                               % to a global phase factor and inherent
                               % rotation of points onto the same trajectory
