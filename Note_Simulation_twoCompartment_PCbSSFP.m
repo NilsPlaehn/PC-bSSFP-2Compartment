@@ -86,7 +86,7 @@ fPD     = 0.6;                % Experimental value
 TR_exp = [3.4,3.62,4.11,4.62,4.84,5.14]/1000;  % Experimental value
 nTR    = numel(TR_exp); 
 % 4) Choose whether opposite or aligned phase will be simulated
-Is_Opposite = false; %true; 
+Is_Opposite = true;% false; %
 
 % 5) Generate superimposed signals
 bSSFP_2comp = zeros(nTR,nPC);
@@ -158,4 +158,40 @@ ax.GridColor ='k';
 ax.LineWidth = 3;
 ax.FontSize  = 20; 
 
-%saveas(gcf,'Simulation_number_xyz.png')
+% 8) Exported data for the note manuscript
+
+if Is_Opposite==false
+    if indTR == 1
+        saveas(gcf,'Note_Simulation_3p4_aligned.png')
+    elseif indTR == 2
+        saveas(gcf,'Note_Simulation_3p62_aligned.png')
+    elseif indTR == 3
+        saveas(gcf,'Note_Simulation_4p11_aligned.png')
+    elseif indTR == 4
+        saveas(gcf,'Note_Simulation_4p62_aligned.png')
+    elseif indTR == 5
+        saveas(gcf,'Note_Simulation_4p84_aligned.png')
+    elseif indTR == 6
+        saveas(gcf,'Note_Simulation_5p14_aligned.png')
+    end
+else
+    if indTR == 1
+        saveas(gcf,'Note_Simulation_3p4_opposite.png')
+    elseif indTR == 2
+        saveas(gcf,'Note_Simulation_3p62_opposite.png')
+    elseif indTR == 3
+        saveas(gcf,'Note_Simulation_4p11_opposite.png')
+    elseif indTR == 4
+        saveas(gcf,'Note_Simulation_4p62_opposite.png')
+    elseif indTR == 5
+        saveas(gcf,'Note_Simulation_4p84_opposite.png')
+    elseif indTR == 6
+        saveas(gcf,'Note_Simulation_5p14_opposite.png')
+    end
+end
+
+
+
+
+
+
