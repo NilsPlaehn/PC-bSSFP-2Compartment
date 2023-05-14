@@ -99,7 +99,7 @@ for indTR = 1:nTR
         end
     end
     % Superposition principle
-    tot = squeeze((1-fPD)*profile_water+fPD*profile_Ace);
+    tot = (1-fPD)*profile_water+fPD*profile_Ace;
     % rotation of global phase by the angle of complex sum
     tot = tot.*exp(-1i.*angle(sum(tot)));
     % save two compartment profile
