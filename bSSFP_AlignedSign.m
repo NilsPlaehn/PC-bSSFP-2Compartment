@@ -40,7 +40,7 @@ function profile = bSSFP_AlignedSign(M0,T1,T2,alpha,phiPC,TR,TE,deltaCS,dB0,B0)
         % while this leads only to a global phase shift and hence they are all set
         % to zero for this simulation. 
         % tot = tot.*exp(-1i.*angle(mean(tot))) is performed in the main code to
-        % correct for this arbitrariness
+        % correct for this arbitrariness anyway
         phi         = gamma*(dB0+deltaCS*B0)*TE;
         theta0      = gamma*(dB0+deltaCS*B0)*TR;
         % note: The sampling of phiPC in paper(i) starts at 180°, while other paper
