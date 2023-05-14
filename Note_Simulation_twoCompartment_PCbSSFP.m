@@ -31,7 +31,7 @@
 % T1:      longitudinal relaxation time
 % T2:      transversal  relaxation time
 % alpha:   excitation angle of RF pulse
-% phiPC:   linear phase increment of RF excitation pulse
+% phi:     linear phase increment of RF excitation pulse
 % TR:      repetition time of each PC-bSSFP module
 % TE:      echo time of each PC-bSSFP module
 % theta:   accumulated phase 
@@ -39,6 +39,7 @@
 % B0:      main magnetic field strength
 % dB0:     B0 inhomogeneity
 % deltaCS: chemical shift of acetone w.r.t water
+%deltaCSw: chemical shift of water
 % fPD:     Proton density fraction of acetone w.r.t. water      
 M0      = 1;                  % M0 is an arbitrary extensive unit
 alpha   = 35*pi/180;          % Experimental value
