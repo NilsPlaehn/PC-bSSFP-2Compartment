@@ -73,10 +73,9 @@ deltaCS = 2.25*10^(-6);       % Experimental value for chemical shift of acetone
                               % Or short: The chemical shift needs to act opposite to dB0 for acetone if water is at 0ppm.
                               % Hence the sign of acetone CS must be positive!  
 deltaCSw = randn(1)*100;      % Chemical shift of water: 
-                              % arbitrary does not lead to a difference of the shape up
+                              % arbitrary: does not lead to a difference of the shape up
                               % to a global phase factor and inherent
                               % rotation of points onto the same trajectory 
-                              % deltaCSw might only make a difference if taken into realtion of a third compartment e.g. three-compartment system
 dB0     = 1000*randn(1);      % Arbitrary: does not lead to a difference of the shape up
                               % to a global phase factor and inherent
                               % rotation of points onto the same trajectory
