@@ -27,20 +27,20 @@
 % Magn. Reson. Med. 2019;81:1534–1552 doi: 10.1002/mrm.27491
 
 % 2) Used parameters: 
-% M0:      polarized magnetization of the substance, i.e. PD ( 1^H proton density)
-% T1:      longitudinal relaxation time
-% T2:      transversal  relaxation time
-% alpha:   excitation angle of RF pulse
-% phi:     linear phase increment of RF excitation pulse
-% TR:      repetition time of each PC-bSSFP module
-% TE:      echo time of each PC-bSSFP module
-% theta:   accumulated phase 
-% gamma:   gyromagnetic ratio for 1H protons
-% B0:      main magnetic field strength
-% dB0:     B0 inhomogeneity
-% deltaCS: chemical shift of acetone w.r.t water
-%deltaCSw: chemical shift of water
-% fPD:     Proton density fraction of acetone w.r.t. water      
+% M0:       polarized magnetization of the substance, i.e. PD ( 1^H proton density)
+% T1:       longitudinal relaxation time
+% T2:       transversal  relaxation time
+% alpha:    excitation angle of RF pulse
+% phi:      linear phase increment of RF excitation pulse
+% TR:       repetition time of each PC-bSSFP module
+% TE:       echo time of each PC-bSSFP module
+% theta:    accumulated phase 
+% gamma:    gyromagnetic ratio for 1H protons
+% B0:       main magnetic field strength
+% dB0:      B0 inhomogeneity
+% deltaCS:  chemical shift of acetone w.r.t water
+% deltaCSw: chemical shift of water
+% fPD:      Proton density fraction of acetone w.r.t. water      
 M0      = 1;                  % M0 is an arbitrary extensive unit
 alpha   = 35*pi/180;          % Experimental value
 % Relaxations times of water and acetone are assumed to be equal and high 
