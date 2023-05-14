@@ -25,7 +25,6 @@ function profile = bSSFP_AlignedSign(M0,T1,T2,alpha,phiPC,TR,TE,deltaCS,dB0,B0)
 % phiPC:   linear phase increment of RF excitation pulse
 % TR:      repetition time of each PC-bSSFP module
 % TE:      echo time of each PC-bSSFP module
-% theta:   accumulated phase 
 % gamma:   gyromagnetic ratio for 1H protons
 % B0:      main magnetic field strength
 % dB0:     B0 inhomogeneity
