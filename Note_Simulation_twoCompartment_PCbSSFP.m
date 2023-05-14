@@ -59,7 +59,7 @@ deltaCS = 2.25*10^(-6);       % Experimental value for PC-bSSFP 2.25+-0.03ppm an
                               % The sign convention in combination of the "bSSFP_OppositeSign.m" function
                               % follows the physical ground truth that Acetone has a higher B0 field screening effect (lenz rule)
                               % than the protons of water. In water the high electronegativity of the oxygen atom
-                              % "steals" all the surounding electrons of the water hydrogene. This leads to least 
+                              % "steals" all the surounding electrons of the water hydrogene atoms. This leads to least 
                               % screening effect of water protons in presence of B0 field because (almost) no electrons are in ambient 
                               % surounding of the hydrogene protons to cause a screening effect based on Lenz' rule.
                               % Hence the sign of acetone CS must be positive! If conventions are changed the argument might be different. 
