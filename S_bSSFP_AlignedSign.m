@@ -1,4 +1,4 @@
-function profile = bSSFP_AlignedSign(M0,T1,T2,alpha,phiPC,TR,TE,deltaCS,dB0,B0)
+function profile = S_bSSFP_AlignedSign(M0,T1,T2,alpha,phiPC,TR,TE,deltaCS,dB0,B0)
 % Description: generation of PC-bSSFP profiles for aligned signs
 
 % Author of function: 
