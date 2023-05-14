@@ -54,7 +54,7 @@ phi     = phit(1:nPC);        % linear sampling of PC increments =[0,2*pi[
                               % trajectories, i.e. phi=-phi leads to same
                               % shape
 deltaCS = 2.25*10^(-6);       % Experimental value for PC-bSSFP 2.25+-0.03ppm and NMR is 2.32+-0.07ppm
-                              % Note DANGER: deltaCS=-deltaCS lead to a complex conjugation which appears as a
+                              % DANGER NOTE: deltaCS=-deltaCS lead to a complex conjugation which appears as a
                               % f=0.4 acetone fraction instead 0.6 fraction. Hence the sign of the CS is important and shouln't be changed!
                               % The sign convention in combination of the "bSSFP_OppositeSign.m" function
                               % follows the physical ground truth that Acetone has a higher B0 field screening effect (lenz rule)
@@ -62,7 +62,12 @@ deltaCS = 2.25*10^(-6);       % Experimental value for PC-bSSFP 2.25+-0.03ppm an
                               % "steals" all the surounding electrons of the water hydrogene atoms. This leads to least 
                               % screening effect of water protons in presence of B0 field because (almost) no electrons are in ambient 
                               % surounding of the hydrogene protons to cause a screening effect based on Lenz' rule.
-                              % Hence the sign of acetone CS must be positive! If conventions are changed the argument might be different. 
+                              % Carbon atoms of acetone exhibit lower electronegativity than the oxygen of water and hence the screening effect
+                              % is higher for the acetone protons. The higher screening effect is diamagnetic and leads to a lowering of the 
+                              % effective field acting on the acetone protons. Because the chemical shift is defined within the accumulated phase 
+                              % theta = -gamma*(dB0-deltaCS*B0)*TR the "deltaCS" term of acetone must be positive to model for the lower effective 
+                              % field acting on the acetone protons. 
+                              % Hence the sign of acetone CS must be positive!  
 dB0     = 1000*randn(1);      % Arbitrary: does not lead to a difference of the shape up
                               % to a global phase factor and inherent
                               % rotation of points onto the same trajectory
