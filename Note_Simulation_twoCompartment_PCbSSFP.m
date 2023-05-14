@@ -74,6 +74,7 @@ dB0     = 1000*randn(1);      % Arbitrary: does not lead to a difference of the 
                               % rotation of points onto the same trajectory
 B0      = 2.89;               % Experimental value
 fPD     = 0.6;                % Experimental value
+                              % If f=0 or f=1 is chosen the "Is_Opposite" for "true" and "false" delivers equal elliptical trajectories
 
 % 3) Sampling of different repetition times TR
 TR_exp = [3.4,3.62,4.11,4.62,4.84,5.14]/1000;  % Experimental value
