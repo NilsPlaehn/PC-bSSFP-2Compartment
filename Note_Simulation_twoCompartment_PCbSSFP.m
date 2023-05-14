@@ -53,7 +53,8 @@ phi     = phit(1:nPC);        % linear sampling of PC increments =[0,2*pi[
 %phi     = -phi;              % Note: sign of PC-increment does not change
                               % trajectories, i.e. phi=-phi leads to same
                               % shape
-deltaCS = 2.25*10^(-6);       % Experimental value for PC-bSSFP 2.25+-0.03ppm and NMR is 2.32+-0.07ppm
+deltaCS = 2.25*10^(-6);       % Experimental value for chemical shift of acetone w.r.t. water 
+                              % Experiental estimations: PC-bSSFP 2.25+-0.03ppm and NMR is 2.32+-0.07ppm
                               % DANGER NOTE: deltaCS=-deltaCS lead to a complex conjugation which appears as a
                               % f=0.4 acetone fraction instead 0.6 fraction (in right handed coordinate frame).
                               % Hence the sign of the CS is important and shouln't be changed!
@@ -69,6 +70,10 @@ deltaCS = 2.25*10^(-6);       % Experimental value for PC-bSSFP 2.25+-0.03ppm an
                               % theta = -gamma*(dB0-deltaCS*B0)*TR the "deltaCS" term of acetone must be positive to model for the lower effective 
                               % field acting on the acetone protons. Or short: The chemical shift needs to act opposite to dB0 for acetone if water is at 0ppm.
                               % Hence the sign of acetone CS must be positive!  
+deltaCSw = randn(1)*100;      % Chemical shift of water: 
+                              % arbitrary does not lead to a difference of the shape up
+                              % to a global phase factor and inherent
+                              % rotation of points onto the same trajectory 
 dB0     = 1000*randn(1);      % Arbitrary: does not lead to a difference of the shape up
                               % to a global phase factor and inherent
                               % rotation of points onto the same trajectory
@@ -91,11 +96,11 @@ for indTR = 1:nTR
     profile_Ace   = zeros(1,nPC);
     for indPC = 1:nPC
         if Is_Opposite == true
-            profile_water(indPC) = bSSFP_OppositeSign(M0,T1,T2,alpha,phi(indPC),TR,TE,0,dB0,B0);
-            profile_Ace(indPC)   = bSSFP_OppositeSign(M0,T1,T2,alpha,phi(indPC),TR,TE,deltaCS,dB0,B0);
+            profile_water(indPC) = bSSFP_OppositeSign(M0,T1,T2,alpha,phi(indPC),TR,TE,deltaCSw,dB0,B0);
+            profile_Ace(indPC)   = bSSFP_OppositeSign(M0,T1,T2,alpha,phi(indPC),TR,TE,deltaCS+deltaCSw,dB0,B0);
         else
-            profile_water(indPC) = bSSFP_AlignedSign(M0,T1,T2,alpha,phi(indPC),TR,TE,0,dB0,B0);
-            profile_Ace(indPC)   = bSSFP_AlignedSign(M0,T1,T2,alpha,phi(indPC),TR,TE,deltaCS,dB0,B0);
+            profile_water(indPC) = bSSFP_AlignedSign(M0,T1,T2,alpha,phi(indPC),TR,TE,deltaCSw,dB0,B0);
+            profile_Ace(indPC)   = bSSFP_AlignedSign(M0,T1,T2,alpha,phi(indPC),TR,TE,deltaCS+deltaCSw,dB0,B0);
         end
     end
     % Superposition principle
