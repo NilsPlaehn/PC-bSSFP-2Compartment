@@ -97,11 +97,11 @@ for indTR = 1:nTR
     profile_Ace   = zeros(1,nPC);
     for indPC = 1:nPC
         if Is_Opposite == true
-            profile_water(indPC) = bSSFP_OppositeSign(M0,T1,T2,alpha,phi(indPC),TR,TE,deltaCSw,dB0,B0);
-            profile_Ace(indPC)   = bSSFP_OppositeSign(M0,T1,T2,alpha,phi(indPC),TR,TE,deltaCS+deltaCSw,dB0,B0);
+            profile_water(indPC) = S_bSSFP_OppositeSign(M0,T1,T2,alpha,phi(indPC),TR,TE,deltaCSw,dB0,B0);
+            profile_Ace(indPC)   = S_bSSFP_OppositeSign(M0,T1,T2,alpha,phi(indPC),TR,TE,deltaCS+deltaCSw,dB0,B0);
         else
-            profile_water(indPC) = bSSFP_AlignedSign(M0,T1,T2,alpha,phi(indPC),TR,TE,deltaCSw,dB0,B0);
-            profile_Ace(indPC)   = bSSFP_AlignedSign(M0,T1,T2,alpha,phi(indPC),TR,TE,deltaCS+deltaCSw,dB0,B0);
+            profile_water(indPC) = S_bSSFP_AlignedSign(M0,T1,T2,alpha,phi(indPC),TR,TE,deltaCSw,dB0,B0);
+            profile_Ace(indPC)   = S_bSSFP_AlignedSign(M0,T1,T2,alpha,phi(indPC),TR,TE,deltaCS+deltaCSw,dB0,B0);
         end
     end
     % Superposition principle
