@@ -75,7 +75,7 @@ deltaCS = 2.25*10^(-6);       % Experimental value for chemical shift of acetone
 deltaCSw = randn(1)*100;      % Arbitrary: does not lead to a difference of the shape up
                               % to a global phase factor and inherent
                               % rotation of points onto the same trajectory 
-dB0     = 1000*randn(1);      % Arbitrary: does not lead to a difference of the shape up
+dB0     = 1000*randn(1);      % Also arbitrary: does not lead to a difference of the shape up
                               % to a global phase factor and inherent
                               % rotation of points onto the same trajectory
 B0      = 2.89;               % Experimental value
