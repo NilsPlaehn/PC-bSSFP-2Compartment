@@ -66,7 +66,7 @@ deltaCS = 2.25*10^(-6);       % Experimental value for PC-bSSFP 2.25+-0.03ppm an
                               % is higher for the acetone protons. The higher screening effect is diamagnetic and leads to a lowering of the 
                               % effective field acting on the acetone protons. Because the chemical shift is defined within the accumulated phase 
                               % theta = -gamma*(dB0-deltaCS*B0)*TR the "deltaCS" term of acetone must be positive to model for the lower effective 
-                              % field acting on the acetone protons. Or short: deltaCS needs to act opposite to dB0 for acetone if water is at 0ppm.
+                              % field acting on the acetone protons. Or short: The chemical shift needs to act opposite to dB0 for acetone if water is at 0ppm.
                               % Hence the sign of acetone CS must be positive!  
 dB0     = 1000*randn(1);      % Arbitrary: does not lead to a difference of the shape up
                               % to a global phase factor and inherent
