@@ -31,7 +31,7 @@ function profile = bSSFP_OppositeSign(M0,T1,T2,alpha,phi,TR,TE,deltaCS,dB0,B0)
 % dB0:     B0 inhomogeneity
 % deltaCS: chemical shift
 
-% 3) following parameterization orients base onto the defintions of the Note which link will be shared
+% 3) following parameterization orients base onto the defintions of the Note whose link will be shared
 %    as soon as it gets accepted and based onto paper (i,ii) 
 
         gamma = 2*pi*42.577*10^6; 
