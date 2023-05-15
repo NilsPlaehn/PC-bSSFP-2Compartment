@@ -8,8 +8,6 @@ This manuscript currently gets restructured and if it gets accepted for publicat
 new published version. 
 Parameters and literature references are included, and explanations are provided within the code
 
-Link to experimental data and phantom data: https://www.dropbox.com/scl/fo/h9k8eczyvguz7jjvm8ids/h?dl=0&rlkey=cmly4p6f8flmyxlnqphbzjw78
-
 If you have questions or comments on the code, on the theory, phantom or experiment, feel free to contact me: 
 
 plaehn.nils@web.de
